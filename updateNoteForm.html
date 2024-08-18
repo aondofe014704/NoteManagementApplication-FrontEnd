@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>updateNote</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f1f1f1;
+        }
+        form{
+            margin-top: 20px;
+            width: 300px;
+            padding: 20px;
+            background-color: green;
+            border-radius: 60px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        form label input{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            outline: none;
+            font-size: 16px;
+        }
+        .update-button{
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            border-radius: 14px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="updatenote-div">
+        <h2>Update Note</h2>
+        <form action="/updateNoteform" id="updateNote" method="post">
+            <label for="email" id="newTitl">new title:</label><br>
+            <input type="text" id="newTitle" name="uname" required><br>
+            <label for="psw" id="newConten">new content:</label><br>
+            <input type="text" id="newContent" name="psw" required><br>
+            <input class="update-button" type="submit" value="Update Note">
+        </form>
+        <a href="updateNoteForm.html"></a>
+    </div>
+    <script src="/updateNoteForm.js"></script>
+</body>
+</html>

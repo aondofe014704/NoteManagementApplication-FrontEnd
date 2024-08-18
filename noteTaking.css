@@ -1,0 +1,54 @@
+
+        *{
+           padding-left: 4px;
+        }
+        body{
+            background-color: lightgrey;
+        }
+        .main-div{
+            display: flex;            
+        }
+        .bgc{
+            width: 300px;
+            height: 300px;
+            border-radius: 87px;
+            cursor: pointer;
+        }
+        .main-div img{
+            width:30px;
+            height: 30px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+        
+        .menu-div{
+            display: flex;
+            gap: 2rem;
+            padding-left: 15rem;            
+        }
+        .second-div{
+            display: flex;
+        }
+        .btns{
+            padding-left: 15rem;
+        }
+        .second-div{
+            background-color: brown;
+            color: green;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 67px;
+        }
+        .btns button{
+            border-radius: 10px;
+            cursor: pointer;
+            background-color :yellowgreen;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border: none;
+        }
+        .btns button :hover{
+            background-color: blue;
+            color: white;
+            transition: background-color 0.3s ease-in-out;
+        }

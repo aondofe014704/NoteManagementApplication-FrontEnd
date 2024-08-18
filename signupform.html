@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register-form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f1f1f1;
+        }
+        form{
+            width: 300px;
+            padding: 20px;
+            background-color: green;
+            border-radius: 60px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            align-content: center;
+        /* width: 250px;
+        height: 380px;
+        background: #ff7200;
+        position: absolute;
+       
+        border-radius: 10px;
+        padding: 25px; */
+        }
+        form label input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            outline: none;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="register-form">
+        <h2>Register Form</h2>
+        <form action="/register" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="userNameInput" name="username" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="emailInput" name="email" required>
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="passwordInput" name="password" required>
+            <br><br>
+            <label for="phoneNumber">phoneNumber:</label>
+            <input type="phoneNumber" id="phoneNumberInput" name="phoneNumber" required>
+            <br><br>
+            <input type="submit" id="submitInput" value="Register" onclick="window.location.href='login.html' ">
+        </form>
+        <a href="loginform.html">Create an account   </a>
+    </div>
+</body>
+</html>
