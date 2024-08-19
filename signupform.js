@@ -1,37 +1,45 @@
 URL = "http://localhost:9002/api/v1/actor/register-user"
-const form = document.querySelector('form')
+document.getElementById("registerForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
 
-form.addEventListener('submitInput', async (e)=> {
-    e.preventDefault();
-    const email = document.getElementById('emailInput').value;
-    const password = document.getElementById('passwordInput').value;
-    const phoneNumber = document.getElementById('phoneNumberInput').value;
-    const userName = document.getElementById('userNameInput').value;
-    
+    // Get form data
+    const username = document.getElementById("userNameInput").value;
+    const email = document.getElementById("emailInput").value;
+    const password = document.getElementById("passwordInput").value;
+    const phoneNumber = document.getElementById("phoneNumberInput").value;
 
-    try{
-        const response = await fetch("/", 
-            {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({email:email, password:password, phoneNumber:phoneNumber, userName:userName})
-            });
+    // Create data object
+    const formData = {
+        username: username,
+        email: email,
+        password: password,
+        phoneNumber: phoneNumber
+    };
 
-            if(response.ok){
-                const result = await response.text();
-                alert('User registration successful');
-                console.log(result)
-            }
-            else {
-                const err = await response.text();
-                alert(err)
-                console.error(err)
-            }
-    } catch (error){
-        alert(error.message);
-    }
-})
+    fetch(URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Success:", data);
+        alert("successful login");
+        // Handle success (e.g., redirect to another page)
+        window.location.href = "noteTaking.html";
+    })
+    .catch((error) => {
+        console.error("Error:", error);
+        // Handle error (e.g., show an error message)
+        alert("Registration failed, please try again.");
+    });
+
+    // Option 2: If you prefer traditional form submission, just remove `event.preventDefault()`
+    // and allow the form to submit normally.
+});
+
+
 
 

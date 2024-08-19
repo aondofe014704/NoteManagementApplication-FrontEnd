@@ -43,7 +43,7 @@
 <body>
     <div class="register-form">
         <h2>Register Form</h2>
-        <form action="/register" method="post">
+        <form action="/register-user" method="POST" >
             <label for="username">Username:</label>
             <input type="text" id="userNameInput" name="username" required>
             <br><br>
@@ -56,9 +56,10 @@
             <label for="phoneNumber">phoneNumber:</label>
             <input type="phoneNumber" id="phoneNumberInput" name="phoneNumber" required>
             <br><br>
-            <input type="submit" id="submitInput" value="Register" onclick="window.location.href='login.html' ">
+            <input type="submit" id="submitInput" value="Register" onClick="formUrl">
         </form>
         <a href="loginform.html">Create an account   </a>
     </div>
+    <script src="signupform.js"></script>
 </body>
 </html>
